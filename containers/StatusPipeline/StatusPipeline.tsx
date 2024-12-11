@@ -31,7 +31,7 @@ export const StatusPipeline = memo(
     src_hash,
     step = '0',
     failed,
-    protocol = 0,
+    protocol = 2,
   }: StatusPipelineProps) => {
     const [timedOutOnlies, setTimedOutOnlies] = useState<Record<string, boolean>>({})
     let link
