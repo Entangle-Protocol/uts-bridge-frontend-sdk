@@ -14,7 +14,6 @@ import BridgeSubmit from '@/containers/Bridge/BridgeSubmit'
 import { useSelector } from 'react-redux'
 import { useBridgeStatus } from '@/containers/Bridge/useBridgeStatus'
 import { BridgeSidebar } from '@/containers/Bridge/BridgeSidebar'
-import { BridgeCctpNote } from '@/containers/Bridge/BridgeCctpNote'
 import { BridgeFees } from '@/containers/Bridge/BridgeFees'
 import useBridgeWallet from '@/hooks/useBridgeWallet'
 import useBridgeBalance from '@/blockchain/EVM/hooks/useBridgeBalance'
@@ -212,7 +211,6 @@ function BridgePage() {
                   }}
                 />
                 <BridgeFees className={css.feesDesc} amount={amount} />
-                {tokenFrom?.protocol === TokenBridgeProtocol.CCTP && <BridgeCctpNote />}
                 <BridgeSubmit
                   amount={amount}
                   destinationAddress={destinationAddress}
