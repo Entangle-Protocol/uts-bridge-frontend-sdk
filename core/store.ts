@@ -14,7 +14,6 @@ import { CoinEntity } from './Coin/CoinEntity'
 import { CoinInteractor } from './Coin/CoinInteractor'
 import { useCallback } from 'react'
 import { AppInteractor } from '@/core/App/AppEntity/AppInteractor'
-import { accountGraphQlApi } from '@/core/Account/AccountGraphQlApi'
 import { bridgeOperationsApi } from '@/core/BridgeOperations/BridgeOperationsApi'
 
 type TMakeStoreFn = (preloadedState?: IState | undefined) => EnhancedStore<
@@ -33,7 +32,6 @@ type TMakeStoreFn = (preloadedState?: IState | undefined) => EnhancedStore<
 export const makeStore: TMakeStoreFn = (preloadedState) => {
   return configureStore({
     reducer: {
-      [accountGraphQlApi.reducerPath]: accountGraphQlApi.reducer,
       [bridgeOperationsApi.reducerPath]: bridgeOperationsApi.reducer,
       // @ts-ignore
       AppEntity: AppEntity.reducer,
@@ -45,9 +43,7 @@ export const makeStore: TMakeStoreFn = (preloadedState) => {
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: false,
-      })
-        .concat(accountGraphQlApi.middleware)
-        .concat(bridgeOperationsApi.middleware),
+      }).concat(bridgeOperationsApi.middleware),
   })
 }
 export type AppDispatch = ReturnType<typeof makeStore>['dispatch']

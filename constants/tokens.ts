@@ -9,9 +9,7 @@ export type TokenName = string
 // - if there are wrapped versions - add these relations to InterchangeableTokens
 
 export enum TokenBridgeProtocol {
-  CCM,
-  CCTP,
-  UTS,
+  UTS = 2,
 }
 
 export interface TokenOption {

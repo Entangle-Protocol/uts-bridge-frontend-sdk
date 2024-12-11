@@ -9,13 +9,6 @@ pnpm-lock.yaml
 .pnp.js
 
 # Local env files
-.env
-.env.main
-.env.*
-2.env
-.env.development.local
-.env.test.local
-.env.production.local
 .vscode
 
 # Testing

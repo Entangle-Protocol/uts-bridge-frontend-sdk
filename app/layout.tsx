@@ -1,6 +1,5 @@
 import { ApolloWrapper } from '@/lib/graphql'
 import '@/public/assets/styles/globals.css'
-import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Providers } from './Providers'
 import { ConnectWallet } from '@/containers/ConnectWallet'
@@ -13,39 +12,6 @@ import Header from '@/containers/Header'
 import fontClasses from '@/public/assets/fonts/fonts'
 
 export const dynamic = 'force-dynamic'
-
-export const metadata: Metadata = {
-  title: 'Entangle Explorer',
-  keywords: [
-    'Entangle',
-    'Blockchain',
-    'Scanner',
-    'Explorer',
-    'Transactions',
-    'Validators',
-    'Analytics',
-  ],
-  description:
-    'Entangle Explorer is a hub for users to delegate and bridge tokens, as well as search, visualize, and analyze all activity within the Entangle Ecosystem, including transactions, addresses, validators, cross-chain messages and more.\n' +
-    'Keywords: Entangle, Blockchain, Scanner, Explorer, Transactions, Validators, Analytics\n',
-  openGraph: {
-    title: 'Entangle Explorer',
-    description:
-      'Entangle Explorer is a hub for users to delegate and bridge tokens, as well as search, visualize, and analyze all activity within the Entangle Ecosystem, including transactions, addresses, validators, cross-chain messages and more.\n' +
-      'Keywords: Entangle, Blockchain, Scanner, Explorer, Transactions, Validators, Analytics\n',
-    url: 'https://explorer.entangle.fi',
-    siteName: 'Entangle Explorer',
-    images: [
-      {
-        url: 'https://explorer.entangle.fi/assets/banners/Explorer.jpg', // Must be an absolute URL
-        width: 2048,
-        height: 1152,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-}
 
 export default async function RootLayout({
   children,

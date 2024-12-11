@@ -8,6 +8,3 @@ export const getChainIconForMsg = (
   chainId: keyof typeof chainList,
   type: 'color' | 'grey' | 'table' = 'table'
 ) => `/chains/msg/${type}/${chainList[chainId]}.png`
-
-export const getETSChainIcon = (chainId: keyof typeof chainList, type: 'color' | 'grey') =>
-  `/ets/icons/chains/${type}/${chainList[chainId]}.png`
