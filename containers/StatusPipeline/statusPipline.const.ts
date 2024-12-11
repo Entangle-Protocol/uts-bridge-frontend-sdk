@@ -19,10 +19,28 @@ const statusTextsCCM: Record<string, string> = {
   '5': 'Funds received on destination chain.',
 }
 
+const statusTextsCCTP: Record<string, string> = {
+  // client
+  '0_0': 'Choose the asset and amount to bridge.',
+  '0_1': 'Ready to approve and send your funds.',
+  '0_2': 'Approve the USDC amount in your wallet.',
+  '0_3': 'Ready to bridge your funds',
+  '1': 'Confirm to send USDC in your wallet.',
+  '2': 'Sending USDC from source chain...',
+  '3_only': 'USDC sent from source chain.',
+  '3': 'Receiving USDC on destination chain...',
+  // server
+  '4_only': 'USDC received on destination chain.',
+  '4': 'Ready to claim your USDC.',
+  '5': 'USDC claimed to your wallet.',
+}
+
 const emptyHash = '0x0000000000000000000000000000000000000000'
 
 const statusesMap = {
+  [TokenBridgeProtocol.CCM]: statusTextsCCM,
   [TokenBridgeProtocol.UTS]: statusTextsCCM,
+  [TokenBridgeProtocol.CCTP]: statusTextsCCTP,
 }
 
 const DELAY_BETWEEN_STEP_AND_ONLY = 5000
