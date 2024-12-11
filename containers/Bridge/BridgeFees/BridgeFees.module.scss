@@ -1,0 +1,125 @@
+.root {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowDown {
+}
+
+.arrow {
+  width: 16px;
+  color: var(--turquoise-60);
+}
+
+.totalFeeTop {
+  color: var(--Neutral-100, #fff);
+  text-align: right;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.label {
+  display: flex;
+  gap: 6px;
+
+  color: var(--Neutral-90, #edeff7);
+  font-family: var(--font-ppneuemontreal);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+
+.value {
+  color: var(--Neutral-80, #d3d6e0);
+  font-family: var(--font-ppneuemontreal);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  border-top: 1px solid var(--Border-color-secondary);
+  margin-top: 13px;
+  padding-top: 12px;
+  margin-bottom: 7px;
+}
+
+.icon,
+.iconInfo {
+  path {
+    stroke: var(--grey-79);
+  }
+
+  &:hover {
+    path {
+      stroke: #06E097;
+    }
+  }
+}
+
+.tooltipContent {
+  background: rgba(14, 14, 14, 0.95);
+  border-radius: 2px 8px 8px 8px;
+  border: 1px solid var(--neutral-32);
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.10),
+  0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+  color: var(--Neutral-60);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  max-width: 337px;
+  padding: 16px;
+
+  span {
+    color: var(--Neutral-90);
+  }
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.coin {
+  margin-right: 3px;
+  border-radius: 50%;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.noBorder {
+  border-top: 0;
+  margin: 13px 24px 0 24px;
+}

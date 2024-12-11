@@ -1,0 +1,47 @@
+.participant {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__box {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+
+    &_empty {
+      background-color: var(--bridge-alternative-bg);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__network {
+    line-height: 11px;
+    font-size: 12px;
+    color: var(--neutral-60);
+  }
+
+  &__token {
+    line-height: 16.8px;
+    font-size: 15px;
+    color: var(--neutral-100);
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

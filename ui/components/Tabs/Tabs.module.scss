@@ -1,0 +1,38 @@
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  list-style: none;
+  border-bottom: 1px solid var(--border-color-primary);
+}
+
+.item {
+  font-family: var(--font-ppneuemontreal);
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 2rem;
+  color: var(--neutral-60);
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+.li {
+  flex: 1;
+}
+
+.amount {
+  color: var(--turquoise-60);
+}
+
+.item_active {
+  border-bottom: 2px solid var(--turquoise-60);
+  color: #fff;
+}

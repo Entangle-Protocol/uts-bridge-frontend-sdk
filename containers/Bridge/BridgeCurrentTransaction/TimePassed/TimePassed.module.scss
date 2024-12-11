@@ -1,0 +1,47 @@
+.time {
+  border-radius: 8px;
+  background: var(--Countdown-backdrop-color);
+  color: var(--turquoise-60);
+  text-align: center;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0.52px;
+  width: 318px;
+  margin-bottom: 12px;
+
+  height: 43px;
+  white-space: nowrap;
+
+  @media (min-width: 768px) {
+    max-width: 318px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    height: 43px;
+  }
+}
+
+.status {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+
+  & > * {
+    flex: 1;
+  }
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    & > * {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.destination {
+  display: flex;
+  position: relative;
+  
+
+  &__input {
+    width: 100%;
+    padding: 16px;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--neutral-90);
+    background-color: var(--neutral-30);
+    border-radius: 8px;
+
+    outline: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.3s ease-in-out;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &_primary {
+      padding-right: 82px;
+    }
+
+    &_secondary {
+      flex: 1 1 434px;
+    }
+
+    &_disabled {
+      background-color: var(--bridge-block-disabled);
+      color: var(--neutral-60);
+
+      &::placeholder {
+        color: #3c4952;
+      }
+    }
+
+    &_error {
+      border-bottom-color: var(--red-30);
+    }
+  }
+
+  &__switch {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+  }
+
+  &__button {
+    flex: 1 1 140px;
+    padding: 16px;
+    border: 1px solid currentColor;
+
+    color: var(--turquoise-50);
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    &_disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__separator {
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .destination {
+    &__input {
+      font-size: 14px;
+    }
+  }
+}
+
+
+.label {
+  color: var(--Neutral-60);
+  text-align: right;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+
+.addressNode {
+  color: var(--Neutral-90, #edeff7);
+}
+
+.currentRoot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconWrapper {
+  display: flex;
+  height: 34px;
+  padding: 0px 8px;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: 4.667px;
+  border: 1px solid var(--Lighter-Field-Color-Stroke);
+  background: var(--Field-Dark-Stroke);
+  cursor: pointer;
+}
+
+
+.walletIcon {
+  color: var(--turquoise-60);
+}
+
+.plusIcon {
+  color: var(--turquoise-60);
+}
+
+.inputWrapper {
+  display: flex;
+  width: 372px;
+  max-width: calc(100vw - 87px);
+  height: 34px;
+  padding: 7px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 4px;
+  border: 1px solid var(--Pop-up-Border, #262626);
+  background: var(--Countdown-backdrop-color);
+
+  @media (max-width: 768px) {
+    width: 352px;
+  }
+}
+
+.input {
+  display: flex;
+  width: 285px;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  border: 0;
+
+  color: #fff;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 12px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  background: transparent;
+  outline: 0;
+}
+
+.walletIconSmall {
+  color: var(--primary-color-light)
+}
+
+.otherRoot {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--Lighter-Field-Color-Stroke);
+  background: var(--Field-Dark-Stroke);
+
+  display: flex;
+  height: 34px;
+  padding: 7px 12px;
+  align-items: center;
+  gap: 2px;
+
+  position: relative;
+  top: -13px;
+}
+
+.inputWrapperError {
+  border: 1px solid var(--Error-Error-400, #F87171);
+  background: var(--Orange-10, #301303);
+
+  .walletIconSmall {
+    color: var(--Error-Error-300, #FCA5A5);
+  }
+
+  input {
+    width: 150px;
+    text-overflow: ellipsis
+  }
+}
+
+.inputWrapperSuccess {
+  border: 1px solid var(--Primary-Color-Dark---Opt-1, #069A69);
+}
+
+.smallIconWrapper {
+  display: flex;
+  height: 24px;
+  padding: 0px 6px;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.errorText {
+  color: var(--Red-50);
+  font-family: var(--font-ppneuemontreal);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .otherRoot, .currentRoot {
+    margin-top: 20px;
+  }
+
+  .inputWrapper {
+    margin-top: 6px;
+  }
+
+  .input {
+    width: 230px;
+    text-overflow: ellipsis;
+  }
+}
+
+.errorText {
+  //height: 20px;
+  //width: 19px;
+}

@@ -1,0 +1,33 @@
+
+.iconWrapper {
+  display: flex;
+  height: 34px;
+  padding: 0px 8px;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: 4.667px;
+  border: 1.167px solid var(--Pop-up-Border, #262626);
+  background: var(--Countdown-backdrop-color);
+  cursor: pointer;
+}
+
+.iconWrapper:hover {
+  cursor: pointer;
+  border: 1.167px solid var(--Lighter-Field-Color-Stroke);
+  background: var(--Field-Dark-Stroke);
+}
+
+
+.walletIcon {
+  color: var(--turquoise-60);
+}
+
+.plusIcon {
+  color: var(--turquoise-60);
+}
+
+.text {
+  color: var(--Neutral-90);
+  font-size: 14px;
+}

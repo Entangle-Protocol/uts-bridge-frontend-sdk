@@ -1,0 +1,793 @@
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    border: 1px solid #40424d;
+    border-radius: 24px;
+    padding: 4px;
+}
+
+.account_open {
+    border: 1px solid #069a69;
+}
+
+.account_openUdf {
+    border: 1px solid var(--UDF-Brand-Color);
+}
+
+.account_networks {
+    display: flex;
+
+    background: #141414;
+    border-radius: 100px;
+    padding: 4px;
+}
+
+.account__network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #40424d;
+    cursor: pointer;
+    transition: margin-left 300ms;
+}
+
+.account__network_solana {
+    cursor: not-allowed;
+}
+
+.account__network:not(:first-child) {
+    margin-left: -6px;
+    background: black;
+}
+
+.account__network:hover {
+    border-color: #6e7180;
+}
+
+.account__network_active {
+    border-color: #069a69 !important;
+}
+
+.account__network:hover + .account__network:nth-child(2),
+.account__network:nth-child(2):hover + .account__network:nth-child(3),
+.account__network:nth-child(2):hover,
+.account__network:nth-child(3):hover {
+    margin-left: 6px;
+}
+
+.account__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.account__online {
+    position: relative;
+    z-index: var(--z-index-regular);
+
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba(6, 224, 151, 0.3);
+}
+
+.account__online span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: var(--z-index-regular);
+
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #06e097;
+    transform: translate(-50%, -50%);
+}
+
+.account__online_udf span {
+    background-color: var(--UDF-Brand-Color);
+}
+
+.account___arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.account___arrow path {
+    stroke: var(--turquoise-60);
+}
+
+.account__address {
+    font-family: var(--font-ppneuemontreal);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    text-wrap: nowrap;
+    user-select: none;
+}
+
+.connectButton {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    margin-left: auto;
+    border-radius: 1.5rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--turquoise-60);
+    transition: all 0.1s ease-in-out;
+
+    color: var(--turquoise-60);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.28px;
+}
+
+.connectButton_udf {
+    color: var(--UDF-Brand-Color);
+    border: 1px solid var(--UDF-Brand-Color);
+}
+
+.connectButton img {
+    width: 16px;
+    height: 16px;
+}
+
+.connectButton:hover,
+.connectButton:active {
+    border: 1px solid var(--primary-color-dark---opt-1);
+    background-color: var(--turquoise-05);
+}
+
+.connectButton_udf:hover,
+.connectButton_udf:active {
+    border: 1px solid var(--UDF-Brand-Color);
+    background-color: var(--Dark-Blue-Shade-3);
+}
+
+.renderContainer {
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+
+    padding: 20px;
+    width: 303px;
+    border: 1px solid var(--neutral-32);
+    border-radius: 24px;
+    font-family: var(--font-ppneuemontreal);
+    z-index: var(--z-index-pop-over);
+    box-shadow: 0px 4px 30px 0px rgba(6, 224, 151, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+
+    margin: 7px 0 0;
+}
+
+.renderTitle {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #d9d9d9;
+    margin-bottom: 17px;
+}
+
+.title__link {
+    font-weight: 400;
+}
+
+.nglContainer {
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+.nglContainer:hover {
+    background-color: var(--turquoise-05);
+}
+
+.nglContainer:hover .title__link {
+    color: #06e097;
+}
+
+.bridgeLink {
+    margin-bottom: 12px;
+}
+
+.wrapLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 2px;
+}
+
+.renderSection {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+
+    margin-bottom: 5px;
+}
+
+.goToStaking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.42px;
+
+    line-height: 14.4px;
+    padding: 7.5px 10.11px;
+    border: 0.75px solid var(--turquoise-60);
+    border-radius: 100px;
+    color: var(--turquoise-60);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.goToStaking:hover {
+    background: var(--turquoise-05);
+}
+
+.goToStakingIcon path {
+    fill: var(--turquoise-60);
+}
+
+.renderItem {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+
+    height: 30px;
+    color: var(--neutral-60);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.chainIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 8px;
+
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.renderItemAddress {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+
+    font-size: 14px;
+    color: #a7a7a7;
+}
+
+.renderImage img {
+    background-color: #000;
+}
+
+.renderBorder {
+    height: 2px;
+    border-bottom: 1px solid #303030;
+}
+
+.renderButton {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #8b8b8b;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    color: #c9c9c9;
+    margin-top: 5px;
+}
+
+.copy {
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+}
+
+.copy path {
+    stroke: #a7a7a7 !important;
+}
+
+.accountBalanceContainer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: -4.5px;
+}
+
+.accountBalance {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.nglBalance {
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #fff;
+}
+
+.usdBalance {
+    font-size: 10px;
+    line-height: 12px;
+    color: #d9d9d9;
+}
+
+.copy path {
+    stroke: var(--neutral-60);
+}
+
+.accountIconContainer {
+    display: flex;
+    align-items: center;
+
+    width: 53px;
+    height: 36px;
+    margin-top: 4px;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-40-text-muted);
+}
+
+.accountIconContainer img {
+    margin: auto !important;
+}
+
+.copiedText {
+    margin-left: 5px;
+    color: #06e097;
+}
+
+.copyLabel {
+    display: flex;
+    cursor: pointer;
+}
+
+.copyLabel:hover {
+    color: #b0fee4 !important;
+}
+
+.copyLabel:hover path {
+    fill: #06e097;
+}
+
+.copyIcon {
+    margin-left: 5px;
+    margin-top: 3px;
+    border-radius: unset !important;
+}
+
+.omnipointsIcon {
+    cursor: pointer;
+}
+
+.omnipointsLabel:hover label {
+    color: #b0fee4 !important;
+    cursor: pointer;
+}
+
+.omnipointsLabel:hover path {
+    fill: #06e097;
+}
+
+.jassIcon {
+    margin-top: 6px;
+}
+
+.accountAddressContainer {
+    padding: 4px 10px 4px 4px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+
+.accountAddressContainer.active, .switchChainAddress.active {
+    background: var(--turquoise-05);
+    border: 1px solid var(--Lighter-Field-Color-Stroke);
+}
+
+.accountAddressContainer.active .copyLabel,
+.switchChainAddress.active .copyLabel {
+    color: var(--neutral-60) !important;
+}
+
+.iconBadge {
+    position: fixed;
+    top: 20px;
+    left: 45px;
+}
+
+.jassDropdownIcon {
+    border-radius: 50%;
+    overflow: unset;
+}
+
+.closeIcon {
+    width: 21px;
+    height: 21px;
+    margin-top: -3px;
+}
+
+.closeIcon path {
+    stroke: var(--Neutral-50);
+}
+
+.switchChainDropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.switchChainDropdownLabel {
+    display: flex;
+    gap: 20px;
+}
+
+.switchChainDropdownName {
+    margin-top: -3px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #fff;
+}
+
+.switchChainAddress {
+    display: flex;
+    gap: 5px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: var(--neutral-60);
+    padding: 4px;
+
+    margin-left: -4.5px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+
+.switchChainAddress img {
+    border-radius: 50%;
+}
+
+.switchChainDropdownSubheader {
+    display: flex;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-ppneuemontreal);
+    line-height: 22.15px;
+    color: var(--Neutral-40-Text);
+    margin-bottom: -9px;
+}
+
+.switchChainDropdownChains {
+    display: grid;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+    padding: 16px 15px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.chain:hover {
+    background-color: var(--turquoise-05);
+}
+
+.chainUnavailable {
+    cursor: not-allowed;
+}
+
+.chain img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.accountDropdownHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.accountDropdownLabel {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    width: 100%;
+}
+
+.accountNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.switchChainNameContainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.accountName {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.editAccountNameIcon {
+    width: 14px;
+    height: 14px;
+}
+
+.accountName:hover {
+    color: #b0fee4;
+}
+
+.accountName:hover .editAccountNameIcon path {
+    fill: #06e097;
+}
+
+.accountInputContainer {
+    width: 100%;
+}
+
+.accountInput {
+    all: unset;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--Neutral-60);
+    outline: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+}
+
+.checkIcon {
+    position: fixed;
+    right: 21px;
+}
+
+.checkError rect {
+    fill: var(--Neutral-30-Stroke);
+    cursor: not-allowed;
+}
+
+.checkError path {
+    fill: var(--Neutral-40-Text);
+}
+
+.checkSuccess rect {
+    fill: var(--turquoise-60);
+    cursor: pointer;
+}
+
+.checkSuccess path {
+    stroke: black;
+}
+
+.inputError {
+    border-color: var(--Error-Error-400);
+}
+
+.inputErrorText {
+    position: fixed;
+    color: var(--Error-Error-400);
+    font-size: 10px;
+}
+
+.inputSuccess {
+    border-color: var(--primary-color-light);
+}
+
+.accountDropdownDisconnect {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-ppneuemontreal);
+    color: var(--Neutral-50);
+    cursor: pointer;
+    padding: 4px 10px;
+}
+
+.accountDropdownDisconnect:hover {
+    color: #06e097;
+    background: var(--turquoise-05);
+    border-radius: 5px;
+}
+
+.account_ets, .connectButton_ets {
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 4px -2px rgba(3, 41, 49, 0.50);
+    font-family: var(--font-ppneuemontreal);
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.account_ets {
+    border: 1px solid #24282C;
+    background: #1B1D20;
+}
+
+.account__info_ets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    padding: 0;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.connectButton_ets {
+    gap: 4px;
+
+    border: 1px solid #57C8E0;
+    background: #66E3FF;
+    color: #0F3E48;
+}
+
+.account__network_ets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #24282C;
+    overflow: hidden;
+    cursor: pointer;
+    transition: margin-left 300ms;
+}
+
+.account__address_ets {
+    margin-left: 4px;
+    font-family: var(--font-ppneuemontreal);
+    font-weight: 500;
+    color: #F0EFF0;
+    text-wrap: nowrap;
+    user-select: none;
+}
+
+@media (min-width: 1024px) {
+    .account {
+        margin-left: 0;
+    }
+
+    .connectButton {
+        gap: 10px;
+        margin-left: 0;
+        padding: 10px 12px;
+        padding-right: 18px;
+    }
+
+    .connectButton span {
+        font-size: 0.875rem;
+    }
+
+    .connectButton img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .account__info {
+        padding: 0.5rem;
+    }
+
+    .account__address {
+        font-size: 0.875rem;
+    }
+
+    .account___arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .account_ets, .connectButton_ets {
+        white-space: nowrap;
+        padding: 9px;
+    }
+
+    .account__info_ets, .connectButton_ets {
+        font-size: 10px !important;
+        font-weight: 400 !important;
+    }
+
+    .account_networks {
+        padding: 2.8px;
+    }
+
+    .account__network {
+        width: 22.4px;
+        height: 22.4px;
+    }
+
+    .account__network img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .account__info {
+        gap: 7px;
+        padding: 0.25rem 0.4rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .account_ets {
+        padding: 9px 4px;
+    }
+}

@@ -1,0 +1,25 @@
+.switch {
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--turquoise-60);
+
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  top: 13px;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .switch {
+    &:hover {
+      transform: rotate(180deg) scale(1.05);
+    }
+  }
+}

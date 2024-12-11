@@ -1,0 +1,17 @@
+export const chainList: Record<string | number, string> = {
+  '1': 'ethereum',
+  '10': 'optimism',
+  '56': 'binance',
+  '137': 'polygon',
+  '196': 'xlayer',
+  '1116': 'core',
+  '5000': 'mantle',
+  '8453': 'base',
+  '23888': 'blast',
+  '33033': 'entangle',
+  '33133': 'entangle',
+  '42161': 'arbitrum',
+  '43114': 'avalanche',
+  '728126428': 'tron',
+  '11100000000000000501': 'solana',
+}

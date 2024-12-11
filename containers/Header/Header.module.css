@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 96px;
+  padding-right: 24px;
+
+  /* padding: 1.25rem 4rem; */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--neutral-30);
+}
+
+.containerUts {
+  height: 72px;
+
+  border-bottom: 1px solid #141416;
+  background: #08090a;
+  backdrop-filter: blur(2px);
+}
+
+.limitedRightBorder {
+  border-right: 1px solid var(--Neutral-30---Stroke, #1e1e24);
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.firstWrap {
+  flex: 1 1 auto;
+  height: 100%;
+
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 48px;
+}
+
+@media (min-width: 1920px) {
+  .firstWrap {
+    column-gap: 64px;
+  }
+}
+
+.nav {
+  color: #fff;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  transition: color 0.3s ease-in-out;
+  letter-spacing: 0.32px;
+  white-space: nowrap;
+}
+
+.navHidden {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--Neutral-50);
+  cursor: not-allowed;
+}
+
+.navHidden__icon {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.navHidden__text {
+  font-family: var(--font-ppneuemontreal);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.right {
+  display: flex;
+  align-items: stretch;
+  justify-content: end;
+  gap: 8px;
+  border-radius: 24px;
+  background: transparent;
+  outline: none;
+  margin-left: 24px;
+}
+
+.search {
+  flex: 1 0 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  outline: none;
+  min-width: 300px;
+  max-width: 610px;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  background: transparent;
+  border: 1px solid #1e1e24;
+}
+
+.search::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e7180;
+}
+
+.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.active {
+  rect {
+    fill: var(--primary-color-light);
+  }
+}
+
+.etsLink,
+.etsNavHidden {
+  color: #46494a !important;
+}
+
+.etsLink.active,
+.etsLink:hover {
+  font-weight: 400;
+  color: #fff !important;
+}
+
+.etsLink path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.etsLink.active path,
+.etsLink:hover path {
+  fill: #fff !important;
+}
+
+.etsBridgeLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .etsBridgeLink path {
+    fill: #fff !important;
+  }
+}

@@ -1,0 +1,70 @@
+.root svg {
+  color: var(--primary-color-hover);
+}
+
+.popover {
+  border-radius: 8px;
+  border: 1px solid var(--primary-color-dark---opt-1);
+  background: var(--dropdown-background-drop) !important;
+}
+
+.popover li[aria-selected='true'] {
+  background: #01140e !important;
+}
+
+.popover li:focus {
+  background: #01140e !important;
+}
+
+.popover svg {
+  color: var(--primary-color-hover);
+}
+
+.value {
+  color: #fff;
+  font-family: var(--font-ppneuemontreal);
+  font-size: 14px;
+  line-height: normal;
+}
+
+.wrapper {
+  padding: 0;
+  padding-right: 24px;
+
+  border-radius: 8px;
+  border: 1px solid var(--turquoise-05);
+  background: var(--dropdown-background-drop);
+}
+
+.size {
+  height: 44px;
+  justify-content: center;
+}
+
+.typeHint {
+  cursor: default;
+  color: var(--79-Grey);
+
+  font-family: var(--font-ppneuemontreal);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.option {
+  color: #fff;
+
+  font-family: var(--font-ppneuemontreal);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.label {
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}

@@ -1,0 +1,3 @@
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_MESSAGES_URL
+export const EXPLORER_OVERVIEW_GRAPHQL_URL = process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT
+export const PUBLIC_MAIN_HOST = process.env.NEXT_PUBLIC_MAIN_HOST || ''

@@ -1,0 +1,56 @@
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 24px 24px 24px 24px;
+
+  width: calc(100% - 48px);
+  height: 44px;
+
+  border-radius: 8px;
+  background-color: var(--turquoise-60);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: var(--font-ppneuemontreal);
+  line-height: 22px;
+  color: #000;
+  transition: transform 0.3s ease-in-out;
+
+  &:disabled {
+    background-color: var(--neutral-60);
+    color: var(--neutral-40-text-muted);
+  }
+}
+
+@media (min-width: 768px) {
+  .submit {
+    &:not(.submit:disabled):hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.refresh {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  margin-right: 4px;
+}

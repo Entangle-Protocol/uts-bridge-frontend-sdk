@@ -1,0 +1,116 @@
+@use '../../../styles/animations.scss';
+
+.fadeEnter {
+  @include animations.fadeAnimation(fadeIn);
+}
+
+.fadeExit {
+  @include animations.fadeAnimation(fadeOut);
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-index-max);
+}
+
+.container {
+  display: flex;
+  width: 448px;
+  padding: 24px 24px 32px 24px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  background-color: black;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  color: #fcfcfd;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.closeIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.help {
+  color: var(--informationText);
+  font-size: 16px;
+  line-height: 18px;
+  margin: 20px 0;
+}
+
+.walletItemsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.walletItem {
+  &.clearMultiversx {
+    all: unset;
+  }
+
+  width: 100%;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: var(--bgColor) !important;
+  display: flex !important;
+  height: 56px !important;
+  padding: 0 20px !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+
+  &:hover {
+    border: 1px solid #87b5f9 !important;
+    box-shadow: 0 0 7px 0 rgba(135, 181, 249, 0.8) !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.disabledNetwork {
+  cursor: not-allowed;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+  }
+}
+
+.walletTitle {
+  color: #fcfcfd;
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+}
+
+.walletAsset {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}

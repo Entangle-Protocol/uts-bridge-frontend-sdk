@@ -1,0 +1,50 @@
+@mixin default-notification {
+  display: flex;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  min-height: unset;
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+.Toastify {
+  &__toast {
+    @include default-notification;
+
+    &-container {
+      width: auto;
+      top: 100px;
+    }
+
+    &-body {
+      padding: 0 40px 0 0;
+    }
+  }
+}
+
+.notification {
+  &_error {
+    color: var(--red-50);
+    background-color: var(--notification-error-bg);
+  }
+
+  &_success {
+    color: var(--forest-50);
+    background-color: var(--forest-10);
+  }
+}
+
+@media (max-width: 768px) {
+  .Toastify {
+    &__toast {
+      margin: 1rem;
+      font-size: 10px;
+
+      &-container {
+        width: 100%;
+      }
+    }
+  }
+}

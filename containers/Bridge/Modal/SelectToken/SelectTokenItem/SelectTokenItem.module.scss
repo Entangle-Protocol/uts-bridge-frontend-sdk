@@ -1,0 +1,161 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: transform 0.3s ease-in-out;
+
+  &_selected {
+    background-color: var(--Primary-Color-Dark-Bkg);
+  }
+
+  &__container {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    &_start {
+      align-items: flex-start;
+    }
+
+    &_end {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    display: flex;
+    position: relative;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: var(--Neutral-40-Text);
+    font-size: 13px;
+    line-height: 100%;
+    white-space: nowrap;
+  }
+
+  &__value {
+    color: var(--neutral-100);
+    font-size: 16px;
+    line-height: 120%;
+    white-space: nowrap;
+
+    &_balance {
+      overflow: hidden;
+      max-width: 25vw;
+      display: block !important;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+    padding: 1px 14px;
+
+    font-size: 10px;
+    line-height: 18px;
+
+    background-color: var(--turquoise-05);
+    border: 1px solid currentColor;
+    color: var(--primary-color-light);
+    font-weight: 500;
+    border-radius: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.itemBalanceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.addTokenIconContainer {
+  margin-left: 20px;
+  padding: 4px;
+
+  background-color: #011911;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.addTokenIconContainer:hover {
+  border: 1px solid var(--primary-color-dark---opt-1);
+}
+
+.addTokenIcon {
+  width: 9.33px;
+  height: 9.33px;
+}
+
+.item__value {
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding: 16px;
+  }
+
+  .item__value {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    gap: 0;
+  }
+
+  .item {
+    &:not(.item:disabled):hover {
+      transform: scale(1.03);
+      background-color: var(--Primary-Color-Dark-Bkg);
+    }
+
+    &__button {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .showAddButton {
+    padding-right: 25px;
+    border-right: 1px solid var(--neutral-30);
+  }
+}

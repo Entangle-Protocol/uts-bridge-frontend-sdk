@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  gap: 16px;
+
+  font-family: var(--font-ppneuemontreal);
+}
+
+.operations {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+
+  margin-right: -20px;
+  padding-right: 20px;
+}
+
+.operations__empty {
+  color: var(--Neutral-60);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+
+  text-align: center;
+}
+
+.operations::-webkit-scrollbar {
+  width: 2px;
+}
+
+.operations::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.operations::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--Neutral-40-Text);
+}
+
+.operations__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .operations__wrapper {
+    height: auto;
+  }
+}

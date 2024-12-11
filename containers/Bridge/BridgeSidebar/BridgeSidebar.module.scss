@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tabs {
+  margin-top: 3px;
+  margin-bottom: 24px;
+
+  li > div {
+    padding: 20px 32px 11px
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-bottom: 20px;
+  }
+}

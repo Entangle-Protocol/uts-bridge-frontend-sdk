@@ -1,0 +1,148 @@
+.root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+    'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
+    'Courier New', monospace;
+
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+
+  --callout-rgb: 20, 20, 20;
+  --callout-border-rgb: 108, 108, 108;
+  --card-rgb: 100, 100, 100;
+  --card-border-rgb: 200, 200, 200;
+
+  --glow-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    #2a8af6 0deg,
+    #a853ba 180deg,
+    #e92a67 360deg
+  );
+
+  /*border*/
+  --border-color-primary: #1e1e24;
+
+  /*color*/
+  --text-color-primary: #bcbfcc;
+  --text-color-secondary: #6e7180;
+  --torquoise-01: #000d0cff;
+  --turquoise-05: #001911;
+  --turquoise-10: #022c29;
+  --turquoise-20: #035853;
+  --turquoise-25: #0C6044;
+  --turquoise-30: #05847c;
+  --turquoise-40: #07b0a6;
+  --turquoise-50: #08dccf;
+  --turquoise-60: #06e097;
+
+  --neutral-10: #000;
+  --neutral-30: #1e1e24;
+  --neutral-32: #262626;
+  --neutral-35: #282828;
+  --neutral-40-text-muted: #40424d;
+  --neutral-50: #6E7180;
+  --neutral-55: #7c7c7c;
+  --neutral-60: #9da2b3;
+  --neutral-70: #bcbfcc;
+  --neutral-90: #edeff7;
+  --neutral-100: #ffffff;
+
+  --79-grey: #797979;
+
+  --red-30: #910707;
+  --red-50: #f20b0b;
+  --forest-10: #112302;
+  --forest-50: #54b10b;
+  --grey-79: #797979;
+  --bridge-block-bg: #1d262c;
+  --bridge-alternative-bg: #3c4952;
+  --bridge-tertiary-bg: #14181d;
+  --bridge-block-disabled: #0e1214;
+  --dropdown-background-drop: #010b08;
+  --notification-error-bg: #260101;
+  --primary-color-light: #b0fee4;
+  --primary-color-hover: #00f8a5;
+  --primary-color-dark---opt-1: #069a69;
+  --h2-font-size: 24px;
+  --h2-font-weight: 400;
+
+  --Blue-10: #030a30;
+  --Blue-20: #061461;
+  --Blue-30: #081e91;
+  --Blue-40: #0b28c2;
+  --Blue-50: #0e33f2;
+  --Countdown-backdrop-color: rgba(0, 13, 12, 0.80);
+  --Forest-10: #112302;
+  --Forest-20: #224704;
+  --Forest-30: #336a07;
+  --Forest-40: #438e09;
+  --Forest-50: #54b10b;
+  --Mustard-10: #312102;
+  --Mustard-20: #624203;
+  --Mustard-30: #936205;
+  --Mustard-40: #c38306;
+  --Mustard-50: #f4a408;
+  --Neutral-10-BG: #000000;
+  --Neutral-100: #ffffff;
+  --Neutral-20-Card: #0e0e0e;
+  --Neutral-30-Stroke: #1e1e24;
+  --Neutral-40-Text: #40424d;
+  --Neutral-50: #6e7180;
+  --Neutral-60: #9da2b3;
+  --Neutral-70-Text: #bcbfcc;
+  --Neutral-80: #d3d6e0;
+  --Neutral-90: #edeff7;
+  --Orange-10: #301303;
+  --Orange-20: #602606;
+  --Orange-30: #8f3909;
+  --Orange-40: #bf4c0c;
+  --Purple-10: #17042f;
+  --Purple-20: #2d085d;
+  --Purple-30: #440c8c;
+  --Purple-40: #5b10bb;
+  --Purple-50: #7213ea;
+  --Red-10: #300202;
+  --Red-20: #610404;
+  --Red-30: #910707;
+  --Red-40: #c20909;
+  --Red-50: #f20b0b;
+  --Turquoise-10: #022c29;
+  --Turquoise-20: #035853;
+  --Turquoise-30: #05847c;
+  --Turquoise-50: #08dccf;
+  --Turquoise-v40: #07b0a6;
+
+  /*manually added colors*/
+  --Error-Error-200: #fecaca;
+  --Error-Error-300: #fca5a5;
+  --Error-Error-400: #f87171;
+  --Error-Error-500: #ef4444;
+
+  --Lighter-Field-Color-Stroke: #00291C;
+  --Primary-Color-Dark-Bkg: #011f15;
+  --Field-Dark-Stroke: #001911;
+
+  --UDF-acsent-40: #09839F;
+  --UDF-Brand-Color: #66E3FF;
+  --Dark-Blue-Shade-1: #005366;
+  --Dark-Blue-Shade-2: #00232B;
+  --Dark-Blue-Shade-3: #001318;
+  
+  --Pending-bg: #1B2000;
+  --Pending-color: #F3FF6A;
+  --Claimable-bg: #1B182E;
+  --Claimable-color: #B8ACFE;
+
+  --bridge-overlay-bg: #111115;
+
+  --Border-color-secondary: #303030;
+
+  --z-index-background: -1;
+  --z-index-regular: 1;
+  --z-index-first-layer: 10;
+  --z-index-second-layer: 100;
+  --z-index-pop-over: 200;
+  --z-index-max: 1000;
+}

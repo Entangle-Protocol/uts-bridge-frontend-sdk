@@ -1,0 +1,133 @@
+.root {
+  padding: 11px;
+
+  border-radius: 8px;
+  border: 1px solid var(--neutral-32);
+
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  padding: 4px 6px;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+
+.badge_claimable {
+  background-color: var(--Claimable-bg);
+  color: var(--Claimable-color);
+}
+
+.badge_claimed {
+  background-color: var(--Field-Dark-Stroke);
+  color: var(--primary-color-dark---opt-1);
+}
+
+.badge_failed {
+  background-color: var(--Red-10);
+  color: var(--Error-Error-400);
+}
+
+.badge_pending {
+  background-color: var(--Pending-bg);
+  color: var(--Pending-color);
+}
+
+.badge_complete {
+  background-color: var(--Field-Dark-Stroke);
+  color: var(--primary-color-dark---opt-1);
+}
+
+.time {
+  color: var(--Neutral-60);
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.token {
+  display: flex;
+  align-items: center;
+  width: 45%;
+
+  gap: 4px;
+}
+
+.token__icon {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+}
+
+.token__value {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.28px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chains {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-right: 15px;
+}
+
+.chains__arrow {
+  min-width: 13px;
+  width: 13px;
+  height: 13px;
+}
+
+.chain {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+
+.chain__icon {
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .root:hover .wrapper {
+    transform: scale(1.01);
+  }
+}

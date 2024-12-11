@@ -1,0 +1,117 @@
+.checkbox {
+  position: relative;
+  display: inline-block;
+
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: #141416;
+  transition: all 0.3s ease-in-out;
+
+  &.undefined {
+    border-radius: 4px;
+    border: 1px solid #24282c;
+  }
+
+  &.square {
+    border-radius: 4px;
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+
+  &.checked,
+  &.semichecked {
+    border: 1px solid var(--green-100, #00f8a5);
+    background-color: var(--turquoise-700, #0f3e48);
+
+    &::before {
+      content: '';
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &.square.checked {
+    &::before {
+      background-image: url('/assets/icons/checked-icon.svg');
+    }
+  }
+
+  &.square.semichecked {
+    &::before {
+      background-image: url('/assets/icons/semichecked-icon.svg');
+    }
+  }
+
+  &.round.checked {
+    &::before {
+      background-image: url('/assets/icons/checked-round-icon.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--UDF-Brand-Color);
+    background: #141416;
+  }
+
+  &.nonClickable {
+    cursor: default;
+
+    &:hover {
+      border: 1px solid var(--green-100, #00f8a5);
+      background-color: var(--turquoise-700, #0f3e48);
+    }
+  }
+}
+
+.checkboxWithLabel {
+  display: inline-flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  border-radius: 8px;
+  border: 1px solid #24282c;
+  background: #1b1d20;
+  box-shadow: 0 4px 4px -4px rgba(9, 9, 9, 0.1);
+
+  &.checked,
+  &.semichecked {
+    border: 1px solid #24282c;
+    background: #1b1d20;
+  }
+
+  &.undefined {
+    background: #1b1d20;
+  }
+
+  &:hover {
+    background: #24282c;
+  }
+
+  span {
+    color: #f0eff0;
+    font-family: var(--font-ppneuemontreal);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
