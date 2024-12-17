@@ -1,92 +1,108 @@
-# Entangle Bridge
+# **Entangle Bridge**  
 
-### Installation
+This repository provides everything you need to integrate the Web3 Bridge into your frontend application. The bridge supports multiple chains and tokens, offering seamless interoperability for Universal Token Standard (UTS).  
 
-after you've copied the SSH/HTTPS link from Github and opened the project locally, in order to install all the
-dependencies you will have to run:
+---
 
-``` npm i ```
+## **Installation**  
 
-### Step 1
+After cloning the repository using SSH or HTTPS and opening it locally, install the necessary dependencies by running:  
 
-In ``` /blockchain/providers.ts ``` you will have to set up your wagmi config and add the project id:
-
-``` const projectId = 'your project id' ```
-
-read more here: https://wagmi.sh/react/guides/connect-wallet
-
-Also in the ``` transports ``` variable you can set up your own rpc's for different chains. By default they are all
-public (
-i.e.not reliable at all):
-
-``` 
-export const transports = {
-[mainnet.id]: http('https://ethereum-rpc.publicnode.com'),
-[mantle.id]: http('https://mantle-rpc.publicnode.com'),
-[bsc.id]: http('https://bsc-rpc.publicnode.com')
-...
-} 
+```bash
+npm i
 ```
 
-### Step 2
+---
 
-In ``` /core/Coin/CoinRepository/CoinRepository.ts ``` you can see there are different requests using the env variables.
-These are Coingecko price requests, so do not forget to add needed env variables to you env.file like this:
+## **Step 1: Configure Blockchain Providers**  
 
-``` 
-NEXT_PUBLIC_COINGECKO_API_KEY=your API KEY
-```
+1. Navigate to **`/blockchain/providers.ts`**.  
+2. Set up your wagmi configuration and provide your project ID:  
 
-```NEXT_PUBLIC_BASE_MESSAGES_URL``` this is meant for the history of the bridge operations using GraphQL. You can adjust
-your own back-end here
+   ```typescript
+   const projectId = 'your project id';
+   ```  
 
-This API KEY is for fetching the usd price for the native currency of the selected chain. It is used in
-the ``` BridgeFees ``` component and allows to calculate fees for bridging.
+   Learn more here: [Wagmi Connect Wallet Guide](https://wagmi.sh/react/guides/connect-wallet).  
 
-## Using the Bridge
+3. Update the **`transports`** variable to use your custom RPC endpoints for different chains. By default, they are set to public RPCs, which may not be reliable:  
 
-In ``` /constants/tokens.ts ``` there is a default list of UTS tokens and connectors that can be bridged.
-You can add your own UTS tokens or connectors that you want to bridge. Just follow the ``` TokenOption ``` type and
-you're good to go!
+   ```typescript
+   export const transports = {
+     [mainnet.id]: http('https://ethereum-rpc.publicnode.com'),
+     [mantle.id]: http('https://mantle-rpc.publicnode.com'),
+     [bsc.id]: http('https://bsc-rpc.publicnode.com'),
+     ...
+   };
+   ```  
 
-This bridge SDK has 10 chains by default, all compatible with Universal Token Standard.
-Those include:
-Ethereum
-Mantle
-BSC
-Base
-Arbitrum
-Avalanche
-OP Mainnet
-Polygon
-CoreDAO
-XLayer
-You can find them in the ``` SelectNetworkModal.tsx ``` file. They are filtered according to the tokens available in
-the ``` TOKENS ``` file. So if you add more different tokens, you will see their chains in the modal.
+---
 
-### How to add new chain?
+## **Step 2: Environment Variables**  
 
-- add network to Web3manager (to one of the managers - e.g. EVMManager if it's an EVN chain)
-- add network to networks.ts
-- add network in tokens.ts
+1. In **`/core/Coin/CoinRepository/CoinRepository.ts`**, ensure you provide the required environment variables:  
 
-### File structure
+   ```bash
+   NEXT_PUBLIC_COINGECKO_API_KEY=your API KEY
+   NEXT_PUBLIC_BASE_MESSAGES_URL=your GraphQL endpoint
+   ```  
 
--- `.husky` - git hooks  
--- `.next` - next.js build folder
--- `api` - graphql api calls  
--- `app` - nextjs app router dir, here we store only pages  
--- `blockchain` - blockchain-related logic - providers, hooks, ABIs, etc  
--- `containers` - all the containers  
--- `core` - redux layers. We currently use RTK actively, but in the middle of migrating to RTK-query  
--- `helpers` - different helpers  
--- `hooks` - all the app-common hooks  
--- `lib` - 3rd party libs that we need to store like that.  
--- `providers` - react providers(contexts)  
--- `public` - public folder  
--- `scripts` - some service logic, we need it to interact with cosmos blockchain, you'll most likely not need it  
--- `ui`  
----- `components` - all the ui components
--- `utils` - common utils
+   - **`NEXT_PUBLIC_COINGECKO_API_KEY`**: Used to fetch USD prices for native currencies, essential for calculating bridge fees.  
+   - **`NEXT_PUBLIC_BASE_MESSAGES_URL`**: GraphQL endpoint for tracking the history of bridge operations.  
 
+---
+
+## **Using the Bridge**  
+
+1. Navigate to **`/constants/tokens.ts`**:  
+   - Add UTS tokens or connectors you want to bridge.  
+   - Follow the **`TokenOption`** type to ensure compatibility.  
+
+2. The bridge SDK supports **10 default chains**, compatible with UTS:  
+   - **Ethereum**, **Mantle**, **BSC**, **Base**, **Arbitrum**, **Avalanche**, **Optimism**, **Polygon**, **CoreDAO**, and **XLayer**.  
+
+   These chains are defined in **`SelectNetworkModal.tsx`** and filtered based on tokens in the **`TOKENS`** file.  
+
+---
+
+## **How to Add a New Chain**  
+
+To integrate a new chain, follow these steps:  
+1. Add the network to **`Web3Manager`** (e.g., `EVMManager` for EVM chains).  
+2. Update the chain details in **`networks.ts`**.  
+3. Add the network configuration to **`tokens.ts`**.  
+
+---
+
+## **File Structure**  
+
+- **`.husky`** – Git hooks for the repository.  
+- **`.next`** – Next.js build folder.  
+- **`api`** – GraphQL API calls.  
+- **`app`** – Next.js app router directory for pages.  
+- **`blockchain`** – Blockchain logic, including providers, hooks, and ABIs.  
+- **`containers`** – Reusable container components.  
+- **`core`** – Redux layers.  
+  - Actively uses RTK; transitioning to RTK-query.  
+- **`helpers`** – Utility functions and helpers.  
+- **`hooks`** – Common application hooks.  
+- **`lib`** – Third-party libraries used in the project.  
+- **`providers`** – React contexts and providers.  
+- **`public`** – Public assets folder.  
+- **`scripts`** – Service scripts (e.g., Cosmos blockchain interactions).  
+- **`ui`** –  
+  - **`components`**: All UI components.  
+- **`utils`** – Common utilities.  
+
+---
+
+## **Contributing**  
+
+Contributions are welcome! If you’d like to contribute, please follow the repository guidelines and submit a pull request.  
+
+---  
+
+For questions or support, please reach out via the issues section or contact the repository maintainers.  
+
+---
 
