@@ -16,7 +16,7 @@ npm i
 
 ## **Step 1: Configure Blockchain Providers**  
 
-1. Navigate to **`/blockchain/providers.ts`**.  
+1. Navigate to **`/blockchain/EVM/provider.ts`**.  
 2. Set up your wagmi configuration and provide your project ID:  
 
    ```typescript
